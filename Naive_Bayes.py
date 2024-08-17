@@ -118,7 +118,7 @@ def naive_bayes() -> float:
         parameters_spam[word] = p_word_given_spam
 
         n_word_given_ham = ham_messages[word].sum()
-        p_word_given_ham = (n_word_given_ham + alpha) / (n_ham + (alpha + 1) * n_vocabulary)
+        p_word_given_ham = (n_word_given_ham + alpha) / (n_ham + (alpha + 1))
         parameters_ham[word] = p_word_given_ham
 
     acc = 0
